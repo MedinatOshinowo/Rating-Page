@@ -76,7 +76,7 @@ body {
   background-color: hsl(25, 97%, 53%);
 }
 
-input:checked ~ label {
+.rating input:checked ~ label {
   background-color: hsl(25, 97%, 53%);
 }
 
