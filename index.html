@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rating page</title>
-    <link rel="stylesheet" href="ratingpage.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <div class="container">
+      <!-- question container div -->
+      <div class="question-container">
         <img src="icon-star.svg" alt="star" />
         <h3>How did we do?</h3>
         <p>
@@ -17,14 +18,42 @@
           is appreciated to help us improve our offering!
         </p>
         <div class="number">
-          <button id="btn-1">1</button>
-          <button id="btn-2">2</button>
-          <button id="btn-3">3</button>
-          <button id="btn-4">4</button>
-          <button id="btn-5">5</button>
+          <div class="rating">
+            <label for="1">1</label>
+            <input type="radio" name="rating" id="1" value="1" />
+          </div>
+          <div class="rating">
+            <label for="2">2</label>
+            <input type="radio" name="rating" id="2" value="2" />
+          </div>
+          <div class="rating">
+            <label for="3">3</label>
+            <input type="radio" name="rating" id="3" value="3" />
+          </div>
+          <div class="rating">
+            <label for="4">4</label>
+            <input type="radio" name="rating" id="4" value="4" />
+          </div>
+          <div class="rating">
+            <label for="5">5</label>
+            <input type="radio" name="rating" id="5" value="5" />
+          </div>
         </div>
-        <input type="button" id="submit" value="SUBMIT" onclick="redirect()" />
+
+        <button id="submit">SUBMIT</button>
       </div>
+
+      <!-- result div -->
+      <div class="result-container">
+        <img src="illustration-thank-you.svg" alt="thanks-pic" />
+        <div class="rating-no" id="rating-message">You selected 4 out of 5</div>
+        <h3 class="result-h3">Thank You</h3>
+        <p class="result-p">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support,don't hesitate to get in touch!
+        </p>
+      </div>
+
       <p>
         Challenge by
         <a href="https://www.frontendmentor.io" target="_blank">
@@ -35,5 +64,6 @@
     </main>
 
     <script src="rating.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
